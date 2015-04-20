@@ -1,0 +1,21 @@
+.screen {
+  h1 {
+    margin: 0;
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 17px;
+    margin: 0 0 20px;
+    font-weight: normal;
+    color: $secondary_text_color;
+  }
+}
+
+
+.status {
+  background: #fff;
+  padding: 8px;
+  color: $main_color;
+  margin: 0 0 20px;
+}

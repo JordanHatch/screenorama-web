@@ -1,3 +1,14 @@
-<h1><%= screen.short_device_id %></h1>
+<section class="screen">
+  <h1><%= screen.short_device_id %></h1>
+  <h2><%= screen.url %></h2>
 
-<%= link_to 'Edit', edit_screen_path(screen) %>
+  <div class="status">
+    <% if screen.online? %>
+      Currently online
+    <% else %>
+      Last online: <%= time_ago_in_words(screen.last_requested_at) %> ago
+    <% end %>
+  </div>
+
+  <%= link_to 'Edit', edit_screen_path(screen) %>
+</section>

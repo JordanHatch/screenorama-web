@@ -1,3 +1,16 @@
 <section class="display">
   <iframe src="<%= screen.url %>"></iframe>
 </section>
+
+<script type="text/javascript">
+<!--
+
+$(function(){
+  new Screenorama.Display({
+    el: $('iframe'),
+    lastRequestedAtUrl: '<%= last_requested_at_screen_path(screen, format: 'json') %>'
+  });
+});
+
+-->
+</script>
