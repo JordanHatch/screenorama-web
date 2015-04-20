@@ -3,6 +3,9 @@ class DisplayController < ApplicationController
   after_action :allow_iframes
 
   def show
+    unless screen.present?
+      Screen.create(device_id: params[:id])
+    end
   end
 
 private

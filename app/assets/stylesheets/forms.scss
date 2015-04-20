@@ -24,7 +24,7 @@
   }
 }
 
-button, a.button, a.button:visited, .formtastic .button_action button {
+button, a.button, a.button:link, a.button:visited, .formtastic .button_action button {
   @include font-stack;
 
   background: #fff;
