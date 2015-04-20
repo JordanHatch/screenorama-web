@@ -1,7 +1,18 @@
 <ul class="screens-grid">
   <% screens.each do |screen| %>
   <li>
-    <%= link_to name_and_device_id(screen), screen_path(screen) %>
+    <%= link_to screen_path(screen) do %>
+      <%= name_and_device_id(screen) %>
+      <div class="inline-status <%= "online" if screen.online? %>">
+        <% if screen.online? %>
+          Online
+        <% elsif screen.last_requested_at.present? %>
+          Offline for <%= time_ago_in_words(screen.last_requested_at) %>
+        <% else %>
+          Offline
+        <% end %>
+      </div>
+    <% end %>
   </li>
   <% end %>
 </ul>
