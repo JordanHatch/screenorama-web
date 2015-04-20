@@ -1,0 +1,9 @@
+@mixin scale($amount) {
+  -ms-zoom: $amount;
+  -moz-transform: scale($amount);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale($amount);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale($amount);
+  -webkit-transform-origin: 0 0;
+}
