@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/:id', to: 'display#show', as: :display
+  get '/display/:id', to: 'display#show', as: :display
 
   root to: redirect('/screens')
 
