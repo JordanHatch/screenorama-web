@@ -5,10 +5,12 @@
   function Display(options) {
     this.$el = options.el;
     this.lastRequestedAtUrl = options.lastRequestedAtUrl;
+    this.dataSource = options.dataSource;
 
     this.delay = 15000;
 
     this.updateLastRequestedAt();
+    this.updateDisplay();
   }
 
   Display.prototype.updateLastRequestedAt = function updateLastRequestedAt(){
@@ -19,6 +21,20 @@
     });
 
     setTimeout( $.proxy(this.updateLastRequestedAt, this), this.delay);
+  }
+
+  Display.prototype.updateDisplay = function updateDisplay(){
+    $.ajax({
+      method: 'GET',
+      dataType: 'json',
+      url: this.dataSource,
+    }).done( $.proxy(function(data){
+      if (data.url != null) {
+        this.$el.attr('src', data.url);
+      }
+    }, this));
+
+    setTimeout( $.proxy(this.updateDisplay, this), this.delay);
   }
 
   Screenorama.Display = Display;
