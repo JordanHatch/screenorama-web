@@ -14,6 +14,10 @@ gem 'formtastic'
 gem 'foreman'
 gem 'puma'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
