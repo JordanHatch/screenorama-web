@@ -5,8 +5,10 @@
   <div class="status">
     <% if screen.online? %>
       Currently online
-    <% else %>
+    <% elsif screen.last_requested_at.present? %>
       Last online: <%= time_ago_in_words(screen.last_requested_at) %> ago
+    <% else %>
+      Never been online
     <% end %>
   </div>
 

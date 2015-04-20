@@ -15,6 +15,6 @@ class Screen < ActiveRecord::Base
   end
 
   def online?
-    last_requested_at > 1.minute.ago
+    last_requested_at.present? && last_requested_at > 1.minute.ago
   end
 end
