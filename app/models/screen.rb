@@ -8,4 +8,13 @@ class Screen < ActiveRecord::Base
   def to_param
     device_id
   end
+
+  def update_last_requested_at!
+    self.last_requested_at = Time.now
+    save!
+  end
+
+  def online?
+    last_requested_at > 1.minute.ago
+  end
 end

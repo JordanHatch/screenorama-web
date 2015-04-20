@@ -29,6 +29,11 @@ class ScreensController < ApplicationController
     end
   end
 
+  def last_requested_at
+    screen.update_last_requested_at!
+    head :ok
+  end
+
 private
   attr_writer :screen
 

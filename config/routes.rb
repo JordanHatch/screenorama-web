@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :screens
+  resources :screens do
+    member do
+      post :last_requested_at
+    end
+  end
 
   get '/:id', to: 'display#show', as: :display
 
