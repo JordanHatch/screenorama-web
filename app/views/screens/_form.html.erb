@@ -1,7 +1,9 @@
 <%= semantic_form_for screen do |f| %>
 
   <%= f.inputs do %>
-    <%= f.input :device_id, label: 'Device ID' %>
+    <% if f.object.new_record? %>
+      <%= f.input :device_id, label: 'Device ID' %>
+    <% end %>
     <%= f.input :name, label: 'Descriptive name' %>
     <%= f.input :url, label: 'URL' %>
   <% end %>
