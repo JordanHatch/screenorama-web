@@ -1,0 +1,23 @@
+.screens-grid {
+  li {
+    list-style: none;
+    display: inline;
+
+    a {
+      display: inline-block;
+      width: 30%;
+      height: 150px;
+
+      background: #fff;
+      color: $main_color;
+      text-decoration: none;
+      padding: 8px;
+      margin-bottom: 4px;
+
+      &:hover {
+        background: #f6f6f6;
+      }
+    }
+
+  }
+}

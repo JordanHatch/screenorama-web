@@ -8,9 +8,31 @@
 </head>
 <body>
 
-  <main>
-    <%= yield %>
-  </main>
+  <div id="wrap">
+    <header>
+      <h1><%= link_to 'Screens', root_path %></h1>
+
+      <nav class="screens">
+        <ul>
+          <% screens.each do |screen| %>
+            <li <%= screen_selected_class(screen.device_id) %>>
+              <%= link_to screen_path(screen) do %>
+                <span class="icon" aria-hidden="true"></span>
+                <%= screen.short_device_id %>
+              <% end %>
+            </li>
+          <% end %>
+          <li class="add">
+            <%= link_to 'Add a new screen', new_screen_path %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+  </div>
 
 </body>
 </html>

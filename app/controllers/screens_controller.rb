@@ -32,11 +32,6 @@ class ScreensController < ApplicationController
 private
   attr_writer :screen
 
-  def screens
-    @screens ||= Screen.all
-  end
-  helper_method :screens
-
   def screen
     @screen ||= Screen.find_by_device_id(params[:id])
   end

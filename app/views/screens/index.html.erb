@@ -1,15 +1,7 @@
-<h1>Screens</h1>
-
-<%= link_to 'Add a new screen', new_screen_path %>
-
-<ul>
+<ul class="screens-grid">
   <% screens.each do |screen| %>
   <li>
-    <h3><%= screen.device_id %></h3>
-    <ul>
-      <li><%= link_to 'View display', display_path(screen) %></li>
-      <li><%= link_to 'Edit', edit_screen_path(screen) %></li>
-    </ul>
+    <%= link_to screen.short_device_id, screen_path(screen) %>
   </li>
   <% end %>
 </ul>
