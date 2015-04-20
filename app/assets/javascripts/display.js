@@ -6,7 +6,7 @@
     this.$el = options.el;
     this.lastRequestedAtUrl = options.lastRequestedAtUrl;
 
-    this.delay = 30000;
+    this.delay = 15000;
 
     this.updateLastRequestedAt();
   }
