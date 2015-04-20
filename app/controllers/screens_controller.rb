@@ -43,7 +43,7 @@ private
   helper_method :screen
 
   def screen_params
-    params.require(:screen).permit(:device_id, :url)
+    params.require(:screen).permit(:device_id, :url, :name)
   end
 
 end
