@@ -14,4 +14,15 @@ module ApplicationHelper
     " class=\"#{classes.join(' ')}\"".html_safe
   end
 
+  def name_and_device_id(screen)
+    if screen.name.present?
+      (
+        screen.name + " " +
+        content_tag(:span, sanitize(screen.short_device_id), class: 'device-id')
+      ).html_safe
+    else
+      screen.short_device_id
+    end
+  end
+
 end

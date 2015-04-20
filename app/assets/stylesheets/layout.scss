@@ -72,6 +72,12 @@ header {
         &:hover {
           background: #f6f6f6;
         }
+
+        .device-id {
+          font-weight: normal;
+          font-size: 15px;
+          color: #bbb;
+        }
       }
 
       &.selected a {

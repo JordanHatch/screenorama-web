@@ -1,7 +1,7 @@
 <ul class="screens-grid">
   <% screens.each do |screen| %>
   <li>
-    <%= link_to screen.short_device_id, screen_path(screen) %>
+    <%= link_to name_and_device_id(screen), screen_path(screen) %>
   </li>
   <% end %>
 </ul>
