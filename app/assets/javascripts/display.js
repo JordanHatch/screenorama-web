@@ -4,6 +4,8 @@
 
   function Display(options) {
     this.$el = options.el;
+    this.$message = options.message;
+
     this.lastRequestedAtUrl = options.lastRequestedAtUrl;
     this.dataSource = options.dataSource;
 
@@ -29,8 +31,9 @@
       dataType: 'json',
       url: this.dataSource,
     }).done( $.proxy(function(data){
-      if (data.url != null) {
+      if (data.url != null && data.url != this.$el.attr('src')) {
         this.$el.attr('src', data.url);
+        this.$message.hide();
       }
     }, this));
 

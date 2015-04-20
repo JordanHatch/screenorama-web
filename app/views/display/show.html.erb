@@ -1,6 +1,6 @@
 <section class="display">
   <iframe src="<%= screen.url %>"></iframe>
-  
+
   <% unless screen.url.present? %>
     <div class="welcome-message">
       <div class="content">
@@ -18,6 +18,7 @@
 $(function(){
   new Screenorama.Display({
     el: $('iframe'),
+    message: $('.welcome-message'),
     lastRequestedAtUrl: '<%= last_requested_at_screen_path(screen, format: 'json') %>',
     dataSource: '<%= screen_path(screen, format: 'json') %>'
   });
