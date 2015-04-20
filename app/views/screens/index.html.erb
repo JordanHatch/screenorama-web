@@ -4,6 +4,12 @@
 
 <ul>
   <% screens.each do |screen| %>
-  <li><%= link_to screen.device_id, screen_path(screen) %></li>
+  <li>
+    <h3><%= screen.device_id %></h3>
+    <ul>
+      <li><%= link_to 'View display', display_path(screen) %></li>
+      <li><%= link_to 'Edit', edit_screen_path(screen) %></li>
+    </ul>
+  </li>
   <% end %>
 </ul>

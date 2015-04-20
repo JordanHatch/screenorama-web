@@ -38,7 +38,7 @@ private
   helper_method :screens
 
   def screen
-    @screen ||= Screen.find(params[:id])
+    @screen ||= Screen.find_by_device_id(params[:id])
   end
   helper_method :screen
 
