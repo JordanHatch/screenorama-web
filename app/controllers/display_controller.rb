@@ -1,4 +1,6 @@
 class DisplayController < ApplicationController
+  layout 'display'
+
   def show
   end
 
