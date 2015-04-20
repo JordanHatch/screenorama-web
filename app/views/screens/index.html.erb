@@ -1,0 +1,9 @@
+<h1>Screens</h1>
+
+<%= link_to 'Add a new screen', new_screen_path %>
+
+<ul>
+  <% screens.each do |screen| %>
+  <li><%= link_to screen.device_id, screen_path(screen) %></li>
+  <% end %>
+</ul>
