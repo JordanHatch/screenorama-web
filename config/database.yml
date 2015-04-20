@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: screenorama_production
-  username: screenorama
-  password: <%= ENV['SCREENORAMA_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
