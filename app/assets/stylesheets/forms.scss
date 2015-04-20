@@ -1,0 +1,43 @@
+.formtastic {
+  .input .label {
+    display: block;
+    float: none;
+    width: auto;
+    padding: 0 0 5px;
+  }
+
+  .input input {
+    @include font-stack;
+
+    font-size: 20px;
+    padding: 4px 8px;
+    width: 66%;
+  }
+
+  fieldset.actions {
+    padding-left: 0;
+  }
+
+  .action.link_action {
+    font-size: 15px;
+    margin: 8px 0 0 10px;
+  }
+}
+
+button, a.button, a.button:visited, .formtastic .button_action button {
+  @include font-stack;
+
+  background: #fff;
+  color: $main_color;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 17px;
+  cursor: pointer;
+  border-bottom: 3px solid $border_color;
+  text-decoration: none;
+
+  &:hover {
+    background: #f6f6f6;
+  }
+}

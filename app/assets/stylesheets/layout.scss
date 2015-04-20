@@ -6,6 +6,7 @@
 
 $main_color: #178488;
 $secondary_text_color: #3cddd7;
+$border_color: #0f605d;
 
 * {
   -webkit-box-sizing: border-box;
@@ -119,8 +120,4 @@ main {
   a, a:link, a:visited {
     color:#fff;
   }
-}
-
-input, .formtastic button {
-  @include font-stack;
 }
