@@ -1,9 +1,17 @@
 module ApplicationHelper
 
-  def screen_selected_class(listed_screen_id)
-    if screen.present? && screen.device_id == listed_screen_id
-      ' class="selected"'.html_safe
+  def screen_classes(listed_screen)
+    classes = []
+
+    if screen.present? && screen.device_id == listed_screen.device_id
+      classes << 'selected'
     end
+
+    if listed_screen.online?
+      classes << 'online'
+    end
+
+    " class=\"#{classes.join(' ')}\"".html_safe
   end
 
 end

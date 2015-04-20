@@ -15,7 +15,7 @@
       <nav class="screens">
         <ul>
           <% screens.each do |screen| %>
-            <li <%= screen_selected_class(screen.device_id) %>>
+            <li <%= screen_classes(screen) %>>
               <%= link_to screen_path(screen) do %>
                 <span class="icon" aria-hidden="true"></span>
                 <%= screen.short_device_id %>

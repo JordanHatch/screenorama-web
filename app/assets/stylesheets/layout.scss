@@ -89,6 +89,10 @@ header {
         vertical-align: top;
       }
 
+      &.online .icon {
+        border-color: #0dcf4d;
+      }
+
       &.add {
         margin-top: 10px;
         a {
