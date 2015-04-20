@@ -12,5 +12,9 @@
     <% end %>
   </div>
 
-  <%= link_to 'Edit', edit_screen_path(screen), class: 'button' %>
+  <div class="preview">
+    <iframe src="<%= display_path(screen, preview: true) %>" scrolling="no"></iframe>
+  </div>
+
+  <%= link_to 'Edit screen', edit_screen_path(screen), class: 'button' %>
 </section>

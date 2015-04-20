@@ -19,12 +19,30 @@
   form {
     margin: 30px 0;
   }
+
+  .preview {
+    margin: 0 auto 40px;
+    width: 500px;
+    height: 300px;
+
+    iframe {
+      @include scale(0.5);
+      width: 1000px;
+      height: 600px;
+      background: #000;
+      border: 15px solid $border_color;
+      overflow: hidden;
+    }
+  }
 }
 
 
 .status {
   background: #fff;
-  padding: 8px;
+  padding: 7px 12px;
+  font-size: 17px;
   color: $main_color;
-  margin: 0 0 40px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
 }
