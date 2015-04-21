@@ -13,16 +13,12 @@
       <h1><%= link_to 'Screens', root_path %></h1>
 
       <nav class="screens">
-        <ul>
-          <% screens.each do |screen| %>
-            <li <%= screen_classes(screen) %>>
-              <%= link_to screen_path(screen) do %>
-                <span class="icon" aria-hidden="true"></span>
-                <%= name_and_device_id(screen) %>
-              <% end %>
-            </li>
-          <% end %>
-        </ul>
+        <%= render partial: 'layouts/screen_list', locals: { screens: screens } %>
+
+        <% if new_screens.any? %>
+          <h2>New screens</h2>
+          <%= render partial: 'layouts/screen_list', locals: { screens: new_screens } %>
+        <% end %>
       </nav>
 
       <p>Connect a screen to the internet and it will appear in this list.</p>

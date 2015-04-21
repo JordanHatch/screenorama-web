@@ -5,9 +5,14 @@ class ApplicationController < ActionController::Base
 
 private
   def screens
-    @screens ||= Screen.all
+    @screens ||= Screen.with_urls
   end
   helper_method :screens
+
+  def new_screens
+    @new_screens ||= Screen.without_urls
+  end
+  helper_method :new_screens
 
   def authenticate!
     return unless ENV['USERNAME'].present? && ENV['PASSWORD'].present?
