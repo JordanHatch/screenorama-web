@@ -1,6 +1,8 @@
 <section class="screen">
   <h1><%= name_and_device_id(screen) %></h1>
-  <h2><%= filtered_url screen.url %></h2>
+  <% if screen.url.present? %>
+    <h2><%= filtered_url screen.url %></h2>
+  <% end %>
 
   <div class="status">
     <% if screen.online? %>
