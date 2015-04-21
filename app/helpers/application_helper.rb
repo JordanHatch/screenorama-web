@@ -25,4 +25,11 @@ module ApplicationHelper
     end
   end
 
+  def filtered_url(url)
+    regexp = /((https?:\/\/)(.+)\:(.+)@)/
+    replacement = "\\2∗∗∗∗∗∗∗@"
+
+    url.sub(regexp, replacement)
+  end
+
 end
