@@ -1,5 +1,5 @@
 class ScreensController < ApplicationController
-  before_filter :authenticate!, except: :show
+  before_filter :authenticate!, except: [:show, :last_requested_at]
 
   def index
   end
