@@ -26,9 +26,9 @@
     height: 300px;
 
     iframe {
-      @include scale(0.5);
-      width: 1000px;
-      height: 600px;
+      @include scale(0.25);
+      width: 2000px;
+      height: 1200px;
       background: #000;
       border: 15px solid $border_color;
       overflow: hidden;
