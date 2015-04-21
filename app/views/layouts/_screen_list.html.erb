@@ -1,7 +1,7 @@
 <ul>
   <% screens.each do |screen| %>
     <li <%= screen_classes(screen) %>>
-      <%= link_to screen_path(screen) do %>
+      <%= link_to (local_assigns[:edit_links].present? ? edit_screen_path(screen) : screen_path(screen)) do %>
         <span class="icon" aria-hidden="true"></span>
         <%= name_and_device_id(screen) %>
       <% end %>

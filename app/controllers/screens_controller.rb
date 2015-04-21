@@ -13,7 +13,7 @@ class ScreensController < ApplicationController
 
     if screen.save
       flash.notice = 'Screen saved'
-      redirect_to screens_path
+      redirect_to screen_path(screen)
     else
       render action: :new
     end
@@ -25,7 +25,7 @@ class ScreensController < ApplicationController
   def update
     if screen.update_attributes(screen_params)
       flash.notice = 'Screen updated'
-      redirect_to screens_path
+      redirect_to screen_path(screen)
     else
       render action: :edit
     end

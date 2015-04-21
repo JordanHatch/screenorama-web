@@ -17,7 +17,7 @@
 
         <% if new_screens.any? %>
           <h2>New screens</h2>
-          <%= render partial: 'layouts/screen_list', locals: { screens: new_screens } %>
+          <%= render partial: 'layouts/screen_list', locals: { screens: new_screens, edit_links: true } %>
         <% end %>
       </nav>
 
