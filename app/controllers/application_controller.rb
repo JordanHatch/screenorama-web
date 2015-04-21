@@ -8,4 +8,12 @@ private
     @screens ||= Screen.all
   end
   helper_method :screens
+
+  def authenticate!
+    return unless ENV['USERNAME'].present? && ENV['PASSWORD'].present?
+
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV['USERNAME'] && password == ENV['PASSWORD']
+    end
+  end
 end
